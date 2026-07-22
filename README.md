@@ -1,47 +1,48 @@
-![thumbnail](https://user-images.githubusercontent.com/16558205/180779213-ea740975-3df1-460a-a964-0a623ee25872.png)
+Krishna Andhe — Personal Portfolio
+My personal portfolio website, live at krishnaandhe.github.io.
+Built to showcase my work in IT infrastructure, systems administration, and self-hosted application development.
+---
+🚀 Tech Stack
+Framework: Next.js
+Styling: Tailwind CSS
+Animations: Framer Motion
+Hosting: GitHub Pages (static export)
+---
+📂 Sections
+Header — Intro & tagline
+Work — Selected projects (Route Arc, TripSystemV3, and more)
+Services — What I do
+About — Background & experience
+Contact — Get in touch
+---
+🛠️ Running Locally
+```bash
+# Clone the repo
+git clone https://github.com/krishnaandhe/krishnaandhe.github.io.git
 
-### Features - 
+# Enter the folder
+cd krishnaandhe.github.io
 
-- Modern Stack (Next.js + TailwindCSS)
-- Minimal Design
-- Easy To Browse
-- Easy To Customize your details With GUI
-- Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
-- Dark Mode
+# Install dependencies
+npm install
 
-
-### Sections
-
-- Header
-- Work
-- Services
-- About
-- Contact
-- Markdown Blog
-
-
-### How To Contribute - 
-
-I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
-
-
-### Tech Stack Used - 
-- Next.js
-- TailwindCSS
-
-
-### Thanks
-
-If you liked this portfolio template, don't forget to give it a ⭐.
-
-
-## Supporting
-Many hours of hard work have gone into this project. Your support will be very appreciated!
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/krishnaandhe)
-
-
-
-
-
-
+# Start the dev server
+npm run dev
+```
+Open http://localhost:3000 to view it locally.
+Edit your content via the built-in GUI at http://localhost:3000/edit.
+---
+📦 Deployment
+This site auto-deploys to GitHub Pages via GitHub Actions on every push to `main`.
+```bash
+git add .
+git commit -m "your message"
+git push
+```
+The workflow builds a static export and publishes it live within a couple of minutes.
+---
+📬 Connect
+GitHub: @krishnaandhe
+Portfolio: krishnaandhe.github.io
+---
+<sub>Built with Next.js & Tailwind CSS.</sub>
