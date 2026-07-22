@@ -4,7 +4,7 @@ import { profile } from "@/data/portfolio";
 import ThemeToggle from "./ThemeToggle";
 
 const links = [
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
@@ -27,7 +27,7 @@ export default function Navbar() {
       <nav className="container flex items-center justify-between h-16">
         <a href="#" className="flex items-center gap-2.5" aria-label={profile.name}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="KA logo" className="w-9 h-9" />
+          <img src="/site_logo.png" alt={`${profile.name} logo`} className="w-9 h-9 object-contain" />
           <span className="font-bold tracking-tight hidden sm:inline">
             {profile.firstName}
           </span>

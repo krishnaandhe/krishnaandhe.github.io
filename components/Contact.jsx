@@ -30,7 +30,6 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* 3D tilt social cards — scales to many handles */}
         <div
           className="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-3xl mx-auto"
           style={{ perspective: "1000px" }}

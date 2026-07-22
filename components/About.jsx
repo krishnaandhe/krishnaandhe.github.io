@@ -37,7 +37,6 @@ export default function About() {
                 className="glass rounded-xl p-5 hover:border-accent/60 transition-colors"
               >
                 <div className="flex items-start gap-3">
-                  {/* Logo + name */}
                   <span className="mt-0.5 w-10 h-10 shrink-0 rounded-lg bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-bg">
                     <Icon size={18} />
                   </span>

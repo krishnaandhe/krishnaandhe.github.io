@@ -5,7 +5,7 @@ import Providers from "@/components/Providers";
 export const metadata = {
   title: `${profile.name} — ${profile.role}`,
   description: profile.tagline,
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/site_logo.png" },
   openGraph: {
     title: `${profile.name} — Portfolio`,
     description: profile.tagline,
@@ -16,7 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      {/* suppressHydrationWarning on body too: some browser extensions inject
+          attributes onto <body> before React hydrates (harmless). */}
+      <body suppressHydrationWarning>
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -34,25 +34,31 @@ module.exports = {
           "40%": { transform: "rotate(-4deg)" },
           "50%": { transform: "rotate(10deg)" },
         },
-        marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
         blob: {
           "0%,100%": { transform: "translate(0,0) scale(1)" },
           "33%": { transform: "translate(30px,-40px) scale(1.1)" },
           "66%": { transform: "translate(-20px,20px) scale(0.95)" },
         },
-        bounceDown: {
-          "0%,100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(8px)" },
+        spinSlow: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        glowPulse: {
+          "0%,100%": {
+            boxShadow: "0 0 0 0 rgb(var(--accent) / 0)",
+            borderColor: "rgb(var(--line))",
+          },
+          "50%": {
+            boxShadow: "0 0 18px 0 rgb(var(--accent) / 0.35)",
+            borderColor: "rgb(var(--accent) / 0.6)",
+          },
         },
       },
       animation: {
         wave: "wave 2.2s ease-in-out infinite",
-        marquee: "marquee 30s linear infinite",
         blob: "blob 16s ease-in-out infinite",
-        bounceDown: "bounceDown 1.6s ease-in-out infinite",
+        spinSlow: "spinSlow 18s linear infinite",
+        glowPulse: "glowPulse 3s ease-in-out infinite",
       },
     },
   },

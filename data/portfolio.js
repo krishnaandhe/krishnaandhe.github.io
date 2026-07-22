@@ -1,39 +1,37 @@
 // =====================================================================
 //  EDIT EVERYTHING HERE — the whole site reads from this one file.
-//  "icon" fields are string KEYS mapped to real icons inside components
-//  (see components/icons.js). Unmapped keys fall back to a default icon.
+//  "icon" fields are string KEYS mapped in components/icons.js.
 // =====================================================================
 
 export const profile = {
   name: "Krishna Andhe",
   firstName: "Krishna",
   role: "Systems Administrator & Full-Stack Builder",
-  // Slightly richer hero description (still concise & scannable)
   tagline:
     "IT professional from Kampala with 10+ years across enterprise infrastructure, Microsoft 365 and networking — now building self-hosted platforms and custom web apps that teams actually rely on every day.",
   location: "Kampala, Uganda",
   email: "your.email@example.com", // ← update
-  resumeUrl: "", // optional PDF link
+  // Put your photo at public/profile.jpg then set this to "/profile.jpg"
+  photo: "/profile.svg",
+  resumeUrl: "",
 };
 
-// 3 stats keeps the hero balanced (odd number reads best)
 export const stats = [
   { value: "10+", label: "Years in IT" },
   { value: "M365", label: "Administration" },
   { value: "∞", label: "Self-hosted apps" },
 ];
 
-// Socials — add as many as you like; Contact renders them as 3D tilt cards.
 export const socials = [
   { name: "GitHub", handle: "@krishnaandhe", url: "https://github.com/krishnaandhe", icon: "github" },
-  { name: "LinkedIn", handle: "in/krishnaandhe", url: "https://www.linkedin.com/in/", icon: "linkedin" }, // ← update
-  { name: "Email", handle: "your.email@example.com", url: "mailto:your.email@example.com", icon: "mail" }, // ← update
-  { name: "X (Twitter)", handle: "@krishnaandhe", url: "https://x.com/", icon: "x" }, // ← update or remove
-  { name: "Telegram", handle: "@krishnaandhe", url: "https://t.me/", icon: "telegram" }, // ← update or remove
-  { name: "WhatsApp", handle: "Chat with me", url: "https://wa.me/", icon: "whatsapp" }, // ← update or remove
+  { name: "LinkedIn", handle: "in/krishnaandhe", url: "https://www.linkedin.com/in/", icon: "linkedin" },
+  { name: "Email", handle: "your.email@example.com", url: "mailto:your.email@example.com", icon: "mail" },
+  { name: "X (Twitter)", handle: "@krishnaandhe", url: "https://x.com/", icon: "x" },
+  { name: "Telegram", handle: "@krishnaandhe", url: "https://t.me/", icon: "telegram" },
+  { name: "WhatsApp", handle: "Chat with me", url: "https://wa.me/", icon: "whatsapp" },
 ];
 
-// Tech marquee — each shows ICON + NAME
+// Tech stack — shown as a STATIC glowing grid (2–3 rows)
 export const stack = [
   { name: "Microsoft 365", icon: "microsoft" },
   { name: "Windows Server", icon: "windows" },
@@ -61,8 +59,13 @@ export const about = {
   ],
 };
 
-// Projects — each card shows ICON + NAME
-export const projects = [
+// =====================================================================
+//  PROJECTS
+//  - `featuredProjects` are ALWAYS shown first (great for private repos
+//    like Route Arc that won't come from GitHub).
+//  - `github` controls the AUTO-PULL of your public repositories.
+// =====================================================================
+export const featuredProjects = [
   {
     title: "Route Arc",
     subtitle: "Self-hosted Fleet & Trip Booking System",
@@ -83,29 +86,18 @@ export const projects = [
     badge: "Automation",
     icon: "bell",
   },
-  {
-    title: "M365 Management Console",
-    subtitle: "Web-based PowerShell Admin (Concept)",
-    description:
-      "An AdminDroid-style web console running PowerShell in the background through a clean web UI for day-to-day Office 365 administration.",
-    tags: ["PowerShell", "Web", "M365"],
-    link: "",
-    badge: "In Planning",
-    icon: "terminal",
-  },
-  {
-    title: "Self-Hosting Stack",
-    subtitle: "Nextcloud · Baserow · n8n · NPM · Portainer",
-    description:
-      "End-to-end deployment across Windows Server (IIS), Ubuntu (Hyper-V) and Docker, fronted by Nginx Proxy Manager with SSL.",
-    tags: ["Docker", "Ubuntu", "Nginx"],
-    link: "",
-    badge: "Infrastructure",
-    icon: "server",
-  },
 ];
 
-// Services — each shows ICON + NAME
+export const github = {
+  username: "krishnaandhe", // ← your GitHub username
+  enabled: true, // set false to turn OFF auto-pull entirely
+  max: 6, // max number of repos to show
+  exclude: ["krishnaandhe.github.io", "krishnaandhe"], // repo names to hide
+  includeForks: false, // show forked repos?
+  onlyTopic: "", // e.g. "showcase" → only repos tagged with this GitHub topic
+  sort: "updated", // "updated" | "stars"
+};
+
 export const services = [
   {
     title: "IT Infrastructure",
@@ -124,27 +116,67 @@ export const services = [
   },
 ];
 
-// Experience — CONCISE, informative. Rendered as 3D tilt cards.
+// =====================================================================
+//  EXPERIENCE — expandable timeline (Tim Gesemann style).
+//  Click a role to reveal `details` + `tags`. Add as much as you like.
+// =====================================================================
 export const experience = [
   {
     role: "Systems Administrator",
     org: "Mukwano Group",
     period: "Present",
-    summary: "End-to-end IT operations, M365, Teams & SharePoint, plus self-hosted app deployment.",
+    summary:
+      "End-to-end IT operations, Microsoft 365, Teams & SharePoint, plus self-hosted application deployment.",
     icon: "server",
+    details: [
+      "Manage the full Microsoft 365 tenant — Exchange, Teams, SharePoint and security policies.",
+      "Deploy and maintain self-hosted apps (Nextcloud, Baserow, n8n) on Windows Server, Ubuntu and Docker.",
+      "Designed and shipped Route Arc, an internal PHP/MariaDB fleet & trip booking platform.",
+      "Own SSL, reverse-proxy (Nginx Proxy Manager) and backup strategy across services.",
+    ],
+    tags: ["Microsoft 365", "Docker", "Windows Server", "Ubuntu", "Nginx"],
   },
   {
     role: "IT Infrastructure & Operations",
     org: "Enterprise IT",
     period: "10+ yrs",
-    summary: "Networking, firewalls, Hyper-V virtualization and full server lifecycle management.",
+    summary:
+      "Networking, firewalls, Hyper-V virtualization and full server lifecycle management.",
     icon: "network",
+    details: [
+      "Built and maintained virtualized environments on Hyper-V (NAT vs external switch design).",
+      "Configured firewalls, VLANs and secure remote access across sites.",
+      "Handled full hardware lifecycle — procurement, deployment and decommissioning.",
+      "Diagnosed complex network issues using tcpdump, ss and netstat.",
+    ],
+    tags: ["Networking", "Hyper-V", "Firewalls", "Linux"],
   },
   {
     role: "End-User Support & Training",
     org: "Cross-functional",
     period: "Ongoing",
-    summary: "Hardware lifecycle, onboarding docs and hands-on training across user roles.",
+    summary:
+      "Hardware lifecycle, onboarding documentation and hands-on training across user roles.",
     icon: "users",
+    details: [
+      "Authored help-center docs and interactive flow diagrams for business processes.",
+      "Created onboarding guides for Admin, Employee, Driver and Fleet Manager roles.",
+      "Delivered hands-on training and responsive first-line support.",
+    ],
+    tags: ["Documentation", "Training", "Support"],
+  },
+  {
+    role: "Automation & Integration",
+    org: "Internal Projects",
+    period: "Recent",
+    summary:
+      "Built reminder and workflow automations with n8n + Baserow, integrated with email and APIs.",
+    icon: "code",
+    details: [
+      "Designed an expiry-tracking system with configurable email reminders via Gmail SMTP.",
+      "Built n8n workflows: scheduled triggers, Baserow reads, conditional logic and notifications.",
+      "Explored WhatsApp and SMS notification channels for future expansion.",
+    ],
+    tags: ["n8n", "Baserow", "Automation", "APIs"],
   },
 ];
