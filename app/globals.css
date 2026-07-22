@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: theme("colors.base");
+  color: theme("colors.primary");
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle background glow */
+.bg-glow {
+  background:
+    radial-gradient(600px circle at 20% 10%, rgba(56, 189, 248, 0.08), transparent 40%),
+    radial-gradient(600px circle at 80% 30%, rgba(139, 92, 246, 0.08), transparent 40%);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, theme("colors.accent"), theme("colors.accent2"));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: theme("colors.base");
+}
+::-webkit-scrollbar-thumb {
+  background: theme("colors.line");
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme("colors.accent");
+}
