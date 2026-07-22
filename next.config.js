@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
-// Static-export config for GitHub Pages (repo: krishnaandhe.github.io)
 const nextConfig = {
-  output: "export",        // generates a static ./out folder
+  output: "export",
   reactStrictMode: true,
-  images: {
-    unoptimized: true,     // required: GitHub Pages has no image optimizer
-  },
-  trailingSlash: true,     // cleaner route resolution on GitHub Pages
+  images: { unoptimized: true },
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

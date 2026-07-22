@@ -1,46 +1,99 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root,
+.light {
+  --bg: 248 249 252;
+  --surface: 255 255 255;
+  --line: 226 229 236;
+  --text: 15 18 28;
+  --muted: 90 98 118;
+  --accent: 8 145 178;
+  --accent2: 124 58 237;
+}
+
+.dark {
+  --bg: 8 9 14;
+  --surface: 18 20 28;
+  --line: 34 37 48;
+  --text: 232 234 242;
+  --muted: 150 157 176;
+  --accent: 56 189 248;
+  --accent2: 167 139 250;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: theme("colors.base");
-  color: theme("colors.primary");
-  font-feature-settings: "cv11", "ss01";
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Subtle background glow */
-.bg-glow {
-  background:
-    radial-gradient(600px circle at 20% 10%, rgba(56, 189, 248, 0.08), transparent 40%),
-    radial-gradient(600px circle at 80% 30%, rgba(139, 92, 246, 0.08), transparent 40%);
-}
-
-/* Gradient text */
 .text-gradient {
-  background: linear-gradient(90deg, theme("colors.accent"), theme("colors.accent2"));
+  background: linear-gradient(90deg, rgb(var(--accent)), rgb(var(--accent2)));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Custom scrollbar */
+.glass {
+  background: rgb(var(--surface) / 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(var(--line) / 0.8);
+}
+
+/* Custom cursor (desktop only) */
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
+}
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: rgb(var(--accent));
+}
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid rgb(var(--accent) / 0.6);
+  transition: width 0.25s, height 0.25s, background 0.25s, border-color 0.25s;
+}
+.cursor-ring.hovered {
+  width: 56px;
+  height: 56px;
+  background: rgb(var(--accent) / 0.12);
+  border-color: rgb(var(--accent));
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: theme("colors.base");
+  background: rgb(var(--bg));
 }
 ::-webkit-scrollbar-thumb {
-  background: theme("colors.line");
+  background: rgb(var(--line));
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: theme("colors.accent");
+  background: rgb(var(--accent));
 }
