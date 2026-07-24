@@ -1,51 +1,32 @@
-# Krishna Andhe — Portfolio (v5)
+# Krishna Andhe — Portfolio (v10a)
 
 Interactive, animated single-page portfolio / living resume with light/dark theming.
+Positioned for a **leadership-track IT professional & Microsoft 365 trainer**.
 Live at **[krishnaandhe.github.io](https://krishnaandhe.github.io)**.
 
-## ✨ Features
-- 🖼️ **2-column hero** with profile photo + rotating gradient ring
-- 🪪 **Custom logo** (`site_logo.png`) in navbar + favicon
-- 🌗 **Light / Dark theme toggle**
-- 🖱️ **Custom animated cursor** (desktop) + scroll progress bar
-- ✨ **Glowing Tech Stack grid** (static, pulsing glow — no scrolling)
-- 🗂️ **Projects** — featured (manual) + **auto-pulled public GitHub repos**
-- 🧾 **Expandable Experience timeline** — click a role to reveal resume details
-- 🧊 **3D tilt contact cards** (multi-handle)
+## 🧭 Section Order
+1. **Hero** — identity, role, location, résumé + book-training buttons
+2. **About Me** — leadership + trainer highlights
+3. **Experience** — full 6-role career (hover to expand)
+4. **Tech Stack** — animated proficiency bars
+5. **Projects** — Featured + auto-pulled GitHub repos
+6. **Certifications & Education** — grouped + click-to-view proof modal
+7. **Training** — Microsoft 365 rate card (tiered, "Book" CTAs)
+8. **Testimonials** 🆕 — short & simple quotes under Training
+9. **Trainings & Events Attended** — playful hover chip cloud
+10. **Contact** — social grid + QR + copy-email + résumé
+
+## 🆕 v10a Addition — Testimonials
+Short, simple quote cards placed directly under Training.
+Edit in `data/portfolio.js → testimonials` (each: `quote`, `name`, `role`).
+Add or remove freely — the grid adapts (1–3+ columns).
 
 ## 🚀 Stack
 Next.js 15 · React 19 · Tailwind CSS 3 · Framer Motion 11 · next-themes · react-icons
 
-## 🖼️ Photo & Logo
-- Photo: put your image at `public/profile.jpg`, then set `photo: "/profile.jpg"` in `data/portfolio.js`.
-- Logo: replace `public/site_logo.png` with your own (navbar + favicon use it).
-
-## 🔗 GitHub Auto-Pull (Projects)
-Configured in `data/portfolio.js` → `github`:
-```js
-export const github = {
-  username: "krishnaandhe",
-  enabled: true,          // false = turn off auto-pull
-  max: 6,                 // how many repos to show
-  exclude: ["krishnaandhe.github.io", "krishnaandhe"],
-  includeForks: false,
-  onlyTopic: "",          // e.g. "showcase" → only repos with this GitHub topic
-  sort: "updated",        // "updated" | "stars"
-};
-```
-Repos are fetched **in the browser** from the public GitHub API — no server needed.
-New public repos appear automatically. `featuredProjects` (e.g. private Route Arc)
-always show first.
-
-> Tip: to curate, tag chosen repos with a GitHub **topic** (e.g. `showcase`) and set
-> `onlyTopic: "showcase"`. Only those will appear.
-
-## 🧾 Experience (Resume Details)
-Edit `experience` in `data/portfolio.js`. Each role supports `summary`, a `details`
-array (bullets shown on expand) and `tags`.
-
-## 🎨 Re-theme
-Colors live in `app/globals.css` → `.light` / `.dark` (RGB triplets).
+## 📁 Assets (in /public)
+`site_logo.png` · `logo.svg` · `profile.png` · `resume.pdf`
+(downloads as `Krishna_Andhe_CV.pdf`) · `qr.png` · `og.png` · `certs/*.jpg`
 
 ## 🛠️ Local Dev
 ```bash
@@ -53,7 +34,7 @@ npm install
 npm run dev      # http://localhost:3000
 ```
 
-## 📦 Deploy
+## 🌐 Deploy
 ```bash
 npm run build
 git add . && git commit -m "update" && git push

@@ -3,35 +3,43 @@ import { motion } from "framer-motion";
 import { stack } from "@/data/portfolio";
 import { getIcon } from "./icons";
 
-// Static glowing grid (2–3 rows depending on width). Each pill has a
-// staggered pulsing glow + a stronger glow on hover.
 export default function Stack() {
   return (
-    <section id="stack" className="py-20 border-y border-line bg-surface/40">
+    <section id="stack" className="py-24 border-t border-line">
       <div className="container">
-        <h2 className="text-2xl sm:text-3xl font-bold">Tech Stack &amp; Tools</h2>
-        <p className="text-muted mt-2 mb-10">
-          Technologies I work with day to day.
-        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold">Tech Stack &amp; Proficiency</h2>
+        <p className="text-muted mt-2 mb-10">Technologies I work with day to day.</p>
 
-        <div className="flex flex-wrap gap-3 sm:gap-4">
+        <div className="grid sm:grid-cols-2 gap-x-10 gap-y-6">
           {stack.map((tech, i) => {
             const Icon = getIcon(tech.icon);
             return (
-              <motion.span
+              <motion.div
                 key={tech.name}
                 data-hover
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: (i % 8) * 0.05 }}
-                whileHover={{ y: -4, scale: 1.05 }}
-                style={{ animationDelay: `${(i % 6) * 0.5}s` }}
-                className="flex items-center gap-2.5 px-4 py-3 rounded-xl border bg-surface text-sm font-medium animate-glowPulse hover:!shadow-[0_0_24px_0_rgb(var(--accent)/0.5)] hover:!border-accent transition-shadow"
+                transition={{ duration: 0.4, delay: (i % 6) * 0.06 }}
+                className="group"
               >
-                <Icon className="text-accent" size={20} />
-                {tech.name}
-              </motion.span>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="flex items-center gap-2.5 font-medium">
+                    <Icon className="text-accent group-hover:scale-110 transition-transform" size={20} />
+                    {tech.name}
+                  </span>
+                  <span className="text-xs font-mono text-muted">{tech.level}%</span>
+                </div>
+                <div className="h-2 rounded-full bg-line/60 overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${tech.level}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.15 + (i % 6) * 0.05, ease: "easeOut" }}
+                    className="h-full rounded-full bg-gradient-to-r from-accent to-accent2"
+                  />
+                </div>
+              </motion.div>
             );
           })}
         </div>

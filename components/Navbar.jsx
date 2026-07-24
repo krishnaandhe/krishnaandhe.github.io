@@ -4,9 +4,10 @@ import { profile } from "@/data/portfolio";
 import ThemeToggle from "./ThemeToggle";
 
 const links = [
-  { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Training", href: "#training" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -33,7 +34,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden sm:flex items-center gap-8 text-sm text-muted">
+        <ul className="hidden md:flex items-center gap-7 text-sm text-muted">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="hover:text-text transition-colors">

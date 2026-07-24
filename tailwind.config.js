@@ -43,22 +43,11 @@ module.exports = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
-        glowPulse: {
-          "0%,100%": {
-            boxShadow: "0 0 0 0 rgb(var(--accent) / 0)",
-            borderColor: "rgb(var(--line))",
-          },
-          "50%": {
-            boxShadow: "0 0 18px 0 rgb(var(--accent) / 0.35)",
-            borderColor: "rgb(var(--accent) / 0.6)",
-          },
-        },
       },
       animation: {
         wave: "wave 2.2s ease-in-out infinite",
         blob: "blob 16s ease-in-out infinite",
         spinSlow: "spinSlow 18s linear infinite",
-        glowPulse: "glowPulse 3s ease-in-out infinite",
       },
     },
   },

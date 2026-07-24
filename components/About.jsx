@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { FiCheck } from "react-icons/fi";
 import { about, services } from "@/data/portfolio";
 import { getIcon } from "./icons";
 
@@ -13,14 +14,23 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            {about.heading}
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">{about.heading}</h2>
           {about.paragraphs.map((p, i) => (
-            <p key={i} className="text-muted leading-relaxed mb-4">
-              {p}
-            </p>
+            <p key={i} className="text-muted leading-relaxed mb-4">{p}</p>
           ))}
+
+          {about.highlights?.length > 0 && (
+            <ul className="mt-6 grid sm:grid-cols-2 gap-2.5">
+              {about.highlights.map((h) => (
+                <li key={h} className="flex items-start gap-2 text-sm">
+                  <span className="mt-0.5 w-5 h-5 shrink-0 rounded-md bg-accent/15 text-accent flex items-center justify-center">
+                    <FiCheck size={12} />
+                  </span>
+                  {h}
+                </li>
+              ))}
+            </ul>
+          )}
         </motion.div>
 
         <div className="grid gap-4">
@@ -42,9 +52,7 @@ export default function About() {
                   </span>
                   <div>
                     <h3 className="font-semibold">{s.title}</h3>
-                    <p className="text-muted text-sm mt-1 leading-relaxed">
-                      {s.desc}
-                    </p>
+                    <p className="text-muted text-sm mt-1 leading-relaxed">{s.desc}</p>
                   </div>
                 </div>
               </motion.div>

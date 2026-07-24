@@ -2,10 +2,14 @@ import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Stack from "@/components/Stack";
-import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
+import Stack from "@/components/Stack";
+import Projects from "@/components/Projects";
+import Credentials from "@/components/Credentials";
+import Training from "@/components/Training";
+import Testimonials from "@/components/Testimonials";
+import Events from "@/components/Events";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -16,10 +20,14 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Stack />
-        <Projects />
         <About />
         <Experience />
+        <Stack />
+        <Projects />
+        <Credentials />
+        <Training />
+        <Testimonials />
+        <Events />
         <Contact />
       </main>
     </>

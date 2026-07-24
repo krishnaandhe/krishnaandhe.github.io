@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa6";
 import {
   FiTerminal, FiZap, FiServer, FiCode, FiCloud, FiBell, FiMap,
-  FiUsers, FiShare2, FiBox, FiGitBranch,
+  FiUsers, FiShare2, FiBox, FiGitBranch, FiAward, FiBookOpen,
 } from "react-icons/fi";
 
 const map = {
@@ -18,6 +18,7 @@ const map = {
   powershell: FiTerminal, leaflet: SiLeaflet,
   route: FiMap, bell: FiBell, terminal: FiTerminal, server: FiServer,
   cloud: FiCloud, code: FiCode, network: FiShare2, users: FiUsers, repo: FiGitBranch,
+  cert: FiAward, education: FiBookOpen,
   github: FaGithub, linkedin: FaLinkedin, mail: FaEnvelope,
   x: FaXTwitter, telegram: FaTelegram, whatsapp: FaWhatsapp,
 };
