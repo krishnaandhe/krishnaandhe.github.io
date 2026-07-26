@@ -63,7 +63,7 @@ export default function Hero() {
                 download="Krishna_Andhe_CV.pdf"
                 className="px-6 py-3 rounded-full border border-accent text-accent font-semibold flex items-center gap-2 hover:bg-accent hover:text-bg transition"
               >
-                <FiDownload size={18} /> Résumé
+                <FiDownload size={18} /> Download Resume
               </a>
             )}
           </motion.div>

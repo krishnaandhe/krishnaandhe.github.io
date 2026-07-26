@@ -5,9 +5,9 @@
 export const profile = {
   name: "Krishna Andhe",
   firstName: "Krishna",
-  role: "Systems Administrator, IT Team Lead & M365 Trainer",
+  role: "IT Manager - Cloud, Microsoft 365 & Digital Transformation",
   tagline:
-    "IT professional with 10+ years designing, implementing and managing systems — specialised in virtualization, cloud and Microsoft 365. I lead IT teams, deliver enterprise migrations, and train organisations & individuals on Microsoft 365.",
+    "Results-driven IT professional with 10+ years across enterprise infrastructure, Microsoft 365 and digital transformation. I lead multi-plant IT operations and a team of 5, aligning IT strategy with business goals to deliver scalable, cost-effective solutions — with 750+ deployment projects delivered.",
   locationNote:
     "Indian national 🇮🇳 · Based in Kampala, Uganda 🇺🇬 · Open to global relocation 🌍",
   location: "Kampala, Uganda",
@@ -54,8 +54,9 @@ export const about = {
   ],
   highlights: [
     "Led cloud migration → 30% cost reduction",
+    "Reduced operational costs by ~40%",
     "Cut support tickets by ~50%",
-    "5+ years leading & training Office 365 teams",
+    "5+ years leading & training Office 365 products",
     "750+ projects across India, UAE & Africa",
     "MBA – Information Technology",
     "Multilingual: EN · HI · MR · TE",
@@ -69,7 +70,7 @@ export const featuredProjects = [
     description:
       "PHP + MariaDB platform with role-aware access, Leaflet/OpenStreetMap route mapping, universal ratings and smart pre-fill booking. Designed, built and rolled out end to end.",
     tags: ["PHP", "MariaDB", "Leaflet", "RBAC"],
-    link: "",
+    link: "https://github.com/krishnaandhe/Route_Arc",
     badge: "Flagship",
     icon: "route",
   },
@@ -149,6 +150,20 @@ export const training = {
       cta: "Book a workshop",
     },
     {
+      name: "Admin Trainings",
+      price: "$60",
+      unit: "/ hour",
+      ideal: "IT admins & power users",
+      popular: false,
+      features: [
+        "Tenant & user administration",
+        "Exchange, Teams & SharePoint admin",
+        "Security & governance",
+        "PowerShell basics",
+      ],
+      cta: "Book admin training",
+    },
+    {
       name: "Corporate Program",
       price: "On request",
       unit: "",
@@ -191,18 +206,31 @@ export const testimonials = [
 ];
 
 export const events = [
-  "Microsoft Ignite",
-  "AWS Innovate 2019",
-  "Google Cloud OnBoard",
-  "Microsoft 365 Community",
-  "Sophos Firewall Workshop",
+  // 🎓 Trainer / attended certs — CLICKABLE (open preview modal)
+  {
+    name: "Microsoft Ignite",
+    image: "/events/ignite.jpg",        // scan in public/events/
+    link: "",                           // optional verify link
+    detail: "Attendee — Microsoft Ignite",
+  },
+  { name: "M365 Trainer Certificate", image: "/events/m365-trainer.jpg", link: "https://credential-link", detail: "Delivered Microsoft 365 corporate training", },
+  { name: "Google Cloud Onboard: App Development", image: "/events/gcp-appdev.jpg", link: "https://credential-link", detail: "Application development on GCP", },
+  { name: "AWS Innovate 2018", image: "/events/aws-innovate18.jpg", link: "https://credential-link", detail: "AWS Innovate 2018 Online Event", },
+  { name: "AWS Innovate 2019", image: "/events/aws-innovate19.jpg", link: "https://credential-link", detail: "AWS Innovate 2019 Online Event", },
+
+  { name: "AWSOME DAY 2018", image: "/events/awsome-day18.jpg", link: "https://credential-link", detail: "AWSOME DAY Online Conference 2018", },
+  { name: "AWSOME DAY 2019", image: "/events/awsome-day19.jpg", link: "https://credential-link", detail: "AWSOME DAY Online Conference 2019", },
+  { name: "AWSOME DAY 2020", image: "/events/awsome-day20.jpg", link: "https://credential-link", detail: "AWSOME DAY Online Conference 2020", },
+  { name: "AWSOME DAY 2023", image: "/events/awsome-day23.jpg", link: "https://credential-link", detail: "AWSOME DAY Online Conference 2023", },
+  { name: "AWSOME DAY 2024", image: "/events/awsome-day24.jpg", link: "https://credential-link", detail: "AWSOME DAY Online Conference 2024", },
+
+
+  { name: "AWS SUMMIT ONLINE 2020", image: "/events/aws-summit20.jpg", link: "", detail: "AWS SUMMIT ONLINE 2020", },
+  { name: "AWS Innovate ML-Ai 2019", image: "/events/aws-mlai19.jpg", link: "https://credential-link", detail: "AWS Innovate ML-AI 2019 Online Event", },
+  { name: "AWS Innovate ML-Ai 2020", image: "/events/aws-mlai20.jpg", link: "https://credential-link", detail: "AWS Innovate ML-AI 2020 Online Event", },
+
+  // ✦ Plain mentions — non-clickable fun chips (no image yet)
   "GITEX Technology Week",
-  "Azure Fundamentals Bootcamp",
-  "PowerApps Dev Session",
-  "Cybersecurity Awareness",
-  "Google Workspace Admin",
-  "Nextcloud Conf",
-  "Docker & Containers Meetup",
 ];
 
 export const certifications = [
@@ -211,31 +239,34 @@ export const certifications = [
   { title: "Azure Solutions Expert (AZ-305)", issuer: "KodeKloud", category: "Microsoft & Azure", icon: "microsoft", detail: "Designing infrastructure, data and application solutions on Azure.", image: "/certs/az-305.jpg", verifyUrl: "https://learn.kodekloud.com/certificate/2D144358E78B-2ED7E870ADB4-2D143D25FA65" },
   { title: "Microsoft 365 Administration", issuer: "LinkedIn Learning", category: "Microsoft & Azure", icon: "microsoft", detail: "M365 tenant administration, governance and security.", image: "/certs/m365-admin.jpg", verifyUrl: "" },
   { title: "M365 Essentials for Administrators", issuer: "LinkedIn Learning", category: "Microsoft & Azure", icon: "microsoft", detail: "Core administrative skills across the Microsoft 365 suite.", image: "/certs/m365-essentials.jpg", verifyUrl: "" },
+  { title: "Cloud Management with MS Intune", issuer: "LinkedIn Learning", category: "Microsoft & Azure", icon: "microsoft", detail: "Cloud Management with Microsoft Intune", image: "/certs/ms-intune.jpg", verifyUrl: "" },
+  { title: "Microsoft Security,Compliance,Identity (SC-900)", issuer: "Udemy", category: "Microsoft & Azure", icon: "microsoft", detail: "Security & Compliance Administration", image: "/certs/sc-900.jpg", verifyUrl: "" },
   { title: "AWS Cloud Practitioner", issuer: "KodeKloud", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Foundational AWS cloud, services and billing knowledge.", image: "/certs/aws-cp.jpg", verifyUrl: "https://learn.kodekloud.com/certificate/2D144358E78B-2EDF1A84CB0F-2D143D25FA65" },
-  { title: "AWS Innovate 2019", issuer: "Amazon Web Services", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Cloud innovation, architecture and modern services.", image: "/certs/aws-innovate.jpg", verifyUrl: "" },
   { title: "GCP Cloud Digital Leader", issuer: "KodeKloud", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Google Cloud technology and digital transformation.", image: "/certs/gcp-cdl.jpg", verifyUrl: "GCP Cloud Digital Leader Certification" },
   { title: "GCP Fundamentals: Core Infrastructure", issuer: "Coursera / Google Cloud", category: "Cloud (AWS & Google)",  icon: "cloud", detail: "Google Cloud Fundamentals: Core Infrastructure", image: "/certs/gcp-fci.jpg", verifyUrl: "https://coursera.org/verify/AHM6EPZETWVK", },
   { title: "GCP Big Data and Machine Learning Fundamentals", issuer: "Google Cloud", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Foundational knowledge of big data and machine learning on Google Cloud.", image: "/certs/gcp-bdml.jpg", verifyUrl: "https://coursera.org/verify/GU2Z5N5TEMKA", },
-  { title: "Google Cloud Onboard: App Development", issuer: "Google Cloud", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Application development on Google Cloud Platform.", image: "/certs/gcp-appdev.jpg", verifyUrl: "" },
-  { title: "Google Cloud Essentials", issuer: "Google Cloud", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Application development on Google Cloud Platform.", image: "/certs/gcp-essentials.jpg", verifyUrl: "https://partner.skills.google/public_profiles/166563c8-a655-4700-947c-9afed6679716/badges/219962" },  
+
+  { title: "Google Cloud Essentials", issuer: "Google Cloud", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Application development on Google Cloud Platform.", image: "/certs/gcp-essentials.jpg", verifyUrl: "https://partner.skills.google/public_profiles/166563c8-a655-4700-947c-9afed6679716/badges/219962" },
+  { title: "GCP DevOps Essentials", issuer: "Google Cloud", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Application development on Google Cloud Platform.", image: "/certs/gcp-devops.jpg", verifyUrl: "https://partner.skills.google/public_profiles/166563c8-a655-4700-947c-9afed6679716/badges/222726" },  
   { title: "Google Cloud Certified in G Suite", issuer: "Google Cloud", category: "Cloud (AWS & Google)", icon: "cloud", detail: "Certified administration of Google's G Suite platform.", image: "/certs/gsuite-certified.jpg", verifyUrl: "" },
   { title: "G Suite Deployment & Customer Success", issuer: "Google", category: "Google Workspace & Chrome", icon: "cloud", detail: "Deployment planning and customer success services.", image: "/certs/gsuite-deploy.jpg", verifyUrl: "" },
   { title: "G Suite Deployment Services Specialist", issuer: "Google", category: "Google Workspace & Chrome", icon: "cloud", detail: "Specialist exam for G Suite deployment services.", image: "/certs/gsuite-specialist.jpg", verifyUrl: "" },
   { title: "Google Chrome: Deployment Planning", issuer: "Google", category: "Google Workspace & Chrome", icon: "cloud", detail: "Planning and rolling out Chrome across an organisation.", image: "/certs/chrome-planning.jpg", verifyUrl: "" },
   { title: "Chrome Deployment Credential", issuer: "Google", category: "Google Workspace & Chrome", icon: "cloud", detail: "Credential exam for Chrome enterprise deployment.", image: "/certs/chrome-credential.jpg", verifyUrl: "" },
+  { title: "Chrome OS IT Administrator", issuer: "Google", category: "Google Workspace & Chrome", icon: "cloud", detail: "Credential exam for Chrome OS.", image: "/certs/chrome-osadmin.jpg", verifyUrl: "" },
   { title: "Google Workspace for IT Administrators", issuer: "Google", category: "Google Workspace & Chrome", icon: "cloud", detail: "Administering Google Workspace in enterprise IT.", image: "/certs/gws-itadmin.jpg", verifyUrl: "https://partner.skills.google/public_profiles/166563c8-a655-4700-947c-9afed6679716/badges/2523629" },
   { title: "Google Workspace Essentials", issuer: "Google", category: "Google Workspace & Chrome", icon: "cloud", detail: "Administering Google Workspace in enterprise IT.", image: "/certs/gws-essentials.jpg", verifyUrl: "https://partner.skills.google/public_profiles/166563c8-a655-4700-947c-9afed6679716/badges/149849" },
   { title: "Cisco Certified (CCNA)", issuer: "R.S.T Forum", category: "Networking & Tools", icon: "network", detail: "Routing, switching and core networking fundamentals.", image: "/certs/ccna.jpg", verifyUrl: "" },
+  { title: "CloudM Migrate Advanced", issuer: "CloudM", category: "Networking & Tools", icon: "cloud", detail: "Advanced migration capabilities using CloudM Migrate.", image: "/certs/cloudm-mig-adv.jpg", verifyUrl: "" },
   { title: "Sophos Firewall Administration", issuer: "Sophos", category: "Networking & Tools", icon: "network", detail: "Firewall policies, VLAN, VPN and secure remote access.", image: "", verifyUrl: "" },
   { title: "PowerShell Automation", issuer: "Microsoft", category: "Networking & Tools", icon: "powershell", detail: "Scripting and automating administrative tasks.", image: "", verifyUrl: "" },
   { title: "Metabase Analytics", issuer: "Self-hosted", category: "Networking & Tools", icon: "code", detail: "Dashboards and SQL-based reporting.", image: "", verifyUrl: "" },
 ];
 
 export const education = [
-  { title: "MBA – Information Technology", issuer: "Sikkim Manipal University", year: "2012 – 2015", icon: "education", detail: "Postgraduate management degree specialising in IT." },
-  { title: "BCA – Computer Applications", issuer: "TMV University, Pune", year: "2009 – 2012", icon: "education", detail: "Bachelor of Computer Applications — IT & development foundations." },
-  { title: "HSC", issuer: "Mumbai University", year: "2006 – 2008", icon: "education", detail: "Higher Secondary Certificate." },
-  { title: "SSC", issuer: "Mumbai University", year: "2005 – 2006", icon: "education", detail: "Secondary School Certificate." },
+  { title: "MBA – Information Technology", issuer: "SMU University", year: "2015", icon: "education", detail: "Postgraduate management degree specialising in IT." },
+  { title: "BCA – Computer Applications", issuer: "TMV University, Pune", year: "2012", icon: "education", detail: "Bachelor of Computer Applications — IT & development foundations." },
+  
 ];
 
 export const experience = [
@@ -329,3 +360,35 @@ export const experience = [
     tags: ["Excel", "Pivot Tables", "Data Analysis"],
   },
 ];
+// -------- NEW: content for the /training/ sub-page --------
+export const trainingDetails = {
+  heading: "Microsoft 365 Training — Details",
+  intro:
+    "A practical, hands-on curriculum for individuals, IT admins and teams. Below are the core modules, learning outcomes and sample materials.",
+
+  // Simple list: title + one-line description
+  modules: [
+    { title: "Getting Started with Microsoft 365", desc: "Portal tour, apps overview, login & security basics." },
+    { title: "Outlook & Exchange Online", desc: "Mail, calendar, rules, shared mailboxes and etiquette." },
+    { title: "Microsoft Teams", desc: "Channels, meetings, calls, files and collaboration best practices." },
+    { title: "SharePoint & OneDrive", desc: "Document libraries, sharing, versioning and sync." },
+    { title: "Security & Compliance", desc: "MFA, safe links, data protection and account hygiene." },
+    { title: "Administration (Admin track)", desc: "Tenant, users, licensing, governance and PowerShell basics." },
+  ],
+
+  outcomes: [
+    "Work confidently across Outlook, Teams, SharePoint & OneDrive",
+    "Apply security best practices (MFA, safe sharing)",
+    "Collaborate efficiently with the right app for each task",
+    "(Admins) Manage users, licensing and governance",
+  ],
+
+  // Sample materials — preview-only by default.
+  // Put files in  public/training/  and reference them as /training/<file>.
+  // Set downloadable: true to also allow a Download button.
+  materials: [
+    { name: "Course Syllabus (Sample)", file: "/training/syllabus-sample.pdf", type: "pdf", sample: true, downloadable: true, detail: "Full module outline & schedule." },
+    { name: "Teams Quick-Start Guide", file: "/training/teams-guide-sample.jpg", type: "image", sample: true, downloadable: false, detail: "One-page visual guide (preview)." },
+    { name: "Security Checklist", file: "/training/security-checklist-sample.jpg", type: "image", sample: true, downloadable: false, detail: "M365 account hardening checklist (preview)." },
+  ],
+};
