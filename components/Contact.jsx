@@ -125,7 +125,7 @@ export default function Contact() {
               data-hover
               className="flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-bg font-semibold hover:opacity-90 transition"
             >
-              <FiDownload size={16} /> Download Résumé
+              <FiDownload size={16} /> Download Resume
             </a>
           )}
         </div>

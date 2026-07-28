@@ -103,13 +103,18 @@ export const services = [
     icon: "users",
   },
   {
-    title: "Microsoft 365 & Cloud",
+    title: "Microsoft 365 & Cloud Apps",
     desc: "M365 governance, Exchange Online, Azure identity and Google Workspace administration.",
     icon: "cloud",
   },
   {
     title: "Training & Enablement",
     desc: "Corporate and 1-on-1 Microsoft 365 training, onboarding and adoption programs.",
+    icon: "cert",
+  },
+  {
+    title: "Microsoft 365 Migration & Deployment",
+    desc: "Complete Office 365 migration, deployment and rollout services for enterprises and teams.",
     icon: "cert",
   },
 ];
@@ -360,35 +365,120 @@ export const experience = [
     tags: ["Excel", "Pivot Tables", "Data Analysis"],
   },
 ];
+
 // -------- NEW: content for the /training/ sub-page --------
 export const trainingDetails = {
-  heading: "Microsoft 365 Training — Details",
+  heading: "Training Details",
   intro:
-    "A practical, hands-on curriculum for individuals, IT admins and teams. Below are the core modules, learning outcomes and sample materials.",
+    "Choose the training that fits you. Each option below shows its price, modules, outcomes, timing, materials and completion certificate — everything in one column.",
 
-  // Simple list: title + one-line description
-  modules: [
-    { title: "Getting Started with Microsoft 365", desc: "Portal tour, apps overview, login & security basics." },
-    { title: "Outlook & Exchange Online", desc: "Mail, calendar, rules, shared mailboxes and etiquette." },
-    { title: "Microsoft Teams", desc: "Channels, meetings, calls, files and collaboration best practices." },
-    { title: "SharePoint & OneDrive", desc: "Document libraries, sharing, versioning and sync." },
-    { title: "Security & Compliance", desc: "MFA, safe links, data protection and account hygiene." },
-    { title: "Administration (Admin track)", desc: "Tenant, users, licensing, governance and PowerShell basics." },
-  ],
+  // Optional: keep the Trainer vs Attendee explainer at the top
+  trainerVsAttendee: {
+    heading: "How the Training Works",
+    subtitle: "What I bring as your trainer — and what you walk away with.",
+    trainer: {
+      label: "What I Bring (Trainer)",
+      points: [
+        "10+ years of real-world Microsoft 365 & IT experience",
+        "Live, screen-shared, hands-on demos",
+        "Real scenarios from actual deployments",
+        "Patient, jargon-free explanations",
+      ],
+    },
+    attendee: {
+      label: "What You'll Earn (Attendee)",
+      points: [
+        "Practical, job-ready Microsoft 365 skills",
+        "Confidence across the core apps",
+        "A recording + resource pack",
+        "A Course Completion Certificate",
+      ],
+    },
+  },
 
-  outcomes: [
-    "Work confidently across Outlook, Teams, SharePoint & OneDrive",
-    "Apply security best practices (MFA, safe sharing)",
-    "Collaborate efficiently with the right app for each task",
-    "(Admins) Manage users, licensing and governance",
-  ],
+  // =====================================================================
+  //  COLUMN-PER-TIER — each object is one full column.
+  //  Customize price + content per column freely.
+  //  Shared material/certificate live in `common` (used by every column)
+  //  but you can override per-tier by adding `materials`/`certificate`.
+  // =====================================================================
+  common: {
+    materials: [
+      { name: "Course Syllabus (Sample)", file: "/training/syllabus-sample.pdf", type: "pdf", downloadable: true },
+      { name: "Teams Quick-Start Guide", file: "/training/teams-guide-sample.jpg", type: "image", downloadable: false },
+      { name: "Security Checklist", file: "/training/security-checklist-sample.jpg", type: "image", downloadable: false },
+    ],
+    certificate: {
+      label: "Course Completion Certificate",
+      sample: "/training/certificate-sample.jpg", // "" for icon only
+      note: "Add to your CV & LinkedIn (as training completed).",
+    },
+  },
 
-  // Sample materials — preview-only by default.
-  // Put files in  public/training/  and reference them as /training/<file>.
-  // Set downloadable: true to also allow a Download button.
-  materials: [
-    { name: "Course Syllabus (Sample)", file: "/training/syllabus-sample.pdf", type: "pdf", sample: true, downloadable: true, detail: "Full module outline & schedule." },
-    { name: "Teams Quick-Start Guide", file: "/training/teams-guide-sample.jpg", type: "image", sample: true, downloadable: false, detail: "One-page visual guide (preview)." },
-    { name: "Security Checklist", file: "/training/security-checklist-sample.jpg", type: "image", sample: true, downloadable: false, detail: "M365 account hardening checklist (preview)." },
+  tiers: [
+    {
+      name: "1-on-1 Session",
+      ideal: "Individuals upskilling",
+      price: "$25",
+      unit: "/ hour",
+      popular: false,
+      features: ["Live online, screen-shared", "Tailored to your goals", "Q&A + follow-up notes"],
+      modules: [
+        { title: "Getting Started with Microsoft 365", desc: "Portal tour, apps overview, security basics." },
+        { title: "Outlook & Exchange Online", desc: "Mail, calendar, rules and etiquette." },
+        { title: "Teams Essentials", desc: "Chat, meetings, files and calls." },
+      ],
+      outcomes: ["Work confidently across core M365 apps", "Apply security best practices (MFA)"],
+      timing: { duration: "1 hour", when: "Flexible — evenings & weekends" },
+      cta: "Book a session",
+    },
+    {
+      name: "Group / Team",
+      ideal: "Small teams (up to 10)",
+      price: "$120",
+      unit: "/ session",
+      popular: true,
+      features: ["90-minute live workshop", "Role-based scenarios", "Recording + resource pack", "Adoption checklist"],
+      modules: [
+        { title: "Getting Started with Microsoft 365", desc: "Portal tour, apps overview, security basics." },
+        { title: "Teams for Collaboration", desc: "Channels, meetings, shared files." },
+        { title: "SharePoint & OneDrive", desc: "Libraries, sharing, versioning." },
+      ],
+      outcomes: ["Collaborate efficiently as a team", "Adopt the right app for each task", "Apply security best practices"],
+      timing: { duration: "90 minutes", when: "Scheduled slots, Mon–Sat" },
+      cta: "Book a workshop",
+    },
+    {
+      name: "Admin Trainings",
+      ideal: "IT admins & power users",
+      price: "$60",
+      unit: "/ hour",
+      popular: false,
+      features: ["Tenant & user administration", "Exchange, Teams & SharePoint admin", "Security & governance", "PowerShell basics"],
+      modules: [
+        { title: "Tenant Administration", desc: "Users, licensing, roles." },
+        { title: "Security & Compliance", desc: "MFA, policies, data protection." },
+        { title: "PowerShell for M365", desc: "Automate common admin tasks." },
+      ],
+      outcomes: ["Manage users, licensing & governance", "Harden tenant security", "Automate with PowerShell"],
+      timing: { duration: "1–2 hours", when: "By appointment" },
+      cta: "Book admin training",
+    },
+    {
+      name: "Corporate Program",
+      ideal: "Companies & rollouts",
+      price: "On request",
+      unit: "",
+      popular: false,
+      features: ["Multi-session curriculum", "Migration & change management", "Train-the-trainer option", "Onsite / hybrid available", "Custom reporting"],
+      modules: [
+        { title: "Discovery & Planning", desc: "Assess needs, tailor curriculum." },
+        { title: "Rollout & Adoption", desc: "Phased training + change management." },
+        { title: "Train-the-Trainer", desc: "Enable internal champions." },
+      ],
+      outcomes: ["Organisation-wide adoption", "Reduced support load", "Sustainable internal capability"],
+      timing: { duration: "Multi-session", when: "Custom calendar, onsite / hybrid" },
+      cta: "Request a quote",
+    },
   ],
 };

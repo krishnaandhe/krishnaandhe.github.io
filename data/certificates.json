@@ -1,0 +1,14 @@
+[
+  {
+    "id": "KA-M365-2026-0001",
+    "recipient": "John Doe",
+    "course": "Microsoft 365 — Essentials & Administration",
+    "date": "21 July 2026"
+  },
+  {
+    "id": "KA-M365-2026-0002",
+    "recipient": "Jane Smith",
+    "course": "Microsoft 365 — Teams & Collaboration",
+    "date": "21 July 2026"
+  }
+]

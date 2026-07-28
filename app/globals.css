@@ -66,20 +66,19 @@ body {
   transform: translate(-50%, -50%);
 }
 .cursor-dot {
-  width: 6px;
-  height: 6px;
+  width: 8px; height: 8px;
   background: rgb(var(--accent));
+  box-shadow: 0 0 8px rgb(var(--accent));
 }
 .cursor-ring {
-  width: 34px;
-  height: 34px;
-  border: 1.5px solid rgb(var(--accent) / 0.6);
-  transition: width 0.25s, height 0.25s, background 0.25s, border-color 0.25s;
+  width: 40px; height: 40px;
+  border: 2px solid rgb(var(--accent) / 0.8);
+  box-shadow: 0 0 14px rgb(var(--accent) / 0.35);
+  transition: width .25s, height .25s, background .25s, border-color .25s;
 }
 .cursor-ring.hovered {
-  width: 56px;
-  height: 56px;
-  background: rgb(var(--accent) / 0.12);
+  width: 64px; height: 64px;
+  background: rgb(var(--accent) / 0.15);
   border-color: rgb(var(--accent));
 }
 
