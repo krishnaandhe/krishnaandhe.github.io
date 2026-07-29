@@ -96,7 +96,7 @@ export default function Events() {
   const list = (events || []).map(norm);
 
   return (
-    <section id="events" className="py-20 border-t border-line">
+    <section id="events" className="py-10 border-t border-line">
       <div className="container">
         <span className="text-sm font-mono text-accent">✦ ALWAYS LEARNING</span>
         <h2 className="text-2xl sm:text-3xl font-bold mt-2">

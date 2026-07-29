@@ -81,7 +81,7 @@ export default function Credentials() {
   });
 
   return (
-    <section id="credentials" className="py-20 border-t border-line">
+    <section id="credentials" className="py-10 border-t border-line">
       <div className="container">
         <h2 className="text-3xl sm:text-4xl font-bold mb-1">Certifications &amp; Education</h2>
         <p className="text-muted mb-8 text-sm">Click any certificate to preview or verify it.</p>

@@ -109,7 +109,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="py-16 border-t border-line">
+    <section id="projects" className="py-10 border-t border-line">
       <div className="container">
         <h2 className="text-3xl sm:text-4xl font-bold mb-2">Projects</h2>
         <p className="text-muted mb-12">Featured work plus my latest public repositories.</p>

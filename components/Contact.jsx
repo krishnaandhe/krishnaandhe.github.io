@@ -25,7 +25,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 border-t border-line relative overflow-hidden">
+    <section id="contact" className="py-10 border-t border-line relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-accent2/15 blur-3xl" />
       </div>
@@ -87,7 +87,7 @@ export default function Contact() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/qr.png" alt="Scan to save my contact"
-                 className="w-40 h-40 rounded-lg bg-white p-2 object-contain" />
+                 className="w-56 h-56 rounded-lg bg-white p-2 object-contain" />
             <p className="text-xs text-muted text-center">Scan to save my contact 📇</p>
           </motion.div>
         </div>

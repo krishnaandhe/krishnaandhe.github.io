@@ -5,7 +5,7 @@ import { getIcon } from "./icons";
 
 export default function Stack() {
   return (
-    <section id="stack" className="py-16 border-t border-line">
+    <section id="stack" className="py-10 border-t border-line">
       <div className="container">
         <h2 className="text-3xl sm:text-4xl font-bold">Tech Stack &amp; Proficiency</h2>
         <p className="text-muted mt-2 mb-10">Technologies I work with day to day.</p>
