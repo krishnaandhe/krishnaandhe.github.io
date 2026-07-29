@@ -113,8 +113,8 @@ export const services = [
     icon: "cert",
   },
   {
-    title: "Microsoft 365 Migration & Deployment",
-    desc: "Complete Office 365 migration, deployment and rollout services for enterprises and teams.",
+    title: "Digital Transformation, Delivered Start to Finish",
+    desc: "Lead organisations through the full digital-transformation journey — from first assessment to lasting adoption — turning Microsoft 365 into measurable business value.",
     icon: "cert",
   },
 ];

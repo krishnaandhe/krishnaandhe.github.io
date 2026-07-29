@@ -5,7 +5,7 @@ import { getIcon } from "./icons";
 
 export default function Work() {
   return (
-    <section id="work" className="py-24">
+    <section id="work" className="py-16">
       <div className="container">
         <h2 className="text-3xl sm:text-4xl font-bold mb-2">Selected Work</h2>
         <p className="text-muted mb-12">

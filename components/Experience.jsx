@@ -86,7 +86,7 @@ function Entry({ e, i, open, setOpen }) {
 export default function Experience() {
   const [open, setOpen] = useState(0);
   return (
-    <section id="experience" className="py-24 border-t border-line">
+    <section id="experience" className="py-16 border-t border-line">
       <div className="container">
         <h2 className="text-3xl sm:text-4xl font-bold mb-3">Experience</h2>
         <p className="text-muted mb-12">Hover a role to reveal the details.</p>

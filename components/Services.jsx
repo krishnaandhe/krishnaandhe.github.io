@@ -4,7 +4,7 @@ import { services } from "@/data/portfolio";
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 border-t border-line">
+    <section id="services" className="py-16 border-t border-line">
       <div className="container">
         <h2 className="text-3xl font-bold mb-12">What I Do</h2>
         <div className="grid sm:grid-cols-3 gap-6">

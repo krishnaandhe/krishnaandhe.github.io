@@ -7,7 +7,7 @@ import { training } from "@/data/portfolio";
 // Uses the NEW data shape (audience/ideal/price) — NO t.features (that was the crash).
 export default function Training() {
   return (
-    <section id="training" className="py-24 border-t border-line relative overflow-hidden">
+    <section id="training" className="py-16 border-t border-line relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-10 right-1/4 w-80 h-80 rounded-full bg-accent/15 blur-3xl" />
       </div>

@@ -11,6 +11,7 @@ import Training from "@/components/Training";
 import Testimonials from "@/components/Testimonials";
 import Events from "@/components/Events";
 import Contact from "@/components/Contact";
+import DigitalTransformation from "@/components/DigitalTransformation";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Projects />
         <Credentials />
         <Training />
+        <DigitalTransformation />  
         <Testimonials />
         <Events />
         <Contact />

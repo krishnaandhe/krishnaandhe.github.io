@@ -6,7 +6,7 @@ import { getIcon } from "./icons";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 border-t border-line">
+    <section id="about" className="py-16 border-t border-line">
       <div className="container grid md:grid-cols-2 gap-12">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
