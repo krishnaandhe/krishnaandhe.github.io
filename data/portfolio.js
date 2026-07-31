@@ -8,6 +8,7 @@ export const profile = {
   role: "IT Manager - Cloud, Microsoft 365 & Digital Transformation",
   tagline:
     "Results-driven IT professional with 10+ years across enterprise infrastructure, Microsoft 365 and digital transformation. I lead multi-plant IT operations and a team of 5, aligning IT strategy with business goals to deliver scalable, cost-effective solutions — with 750+ deployment projects delivered.",
+  handwritten: "let's build something great",
   locationNote:
     "Indian national 🇮🇳 · Based in Kampala, Uganda 🇺🇬 · Open to global relocation 🌍",
   location: "Kampala, Uganda",
@@ -17,10 +18,13 @@ export const profile = {
   whatsapp: "256770761363",
 };
 
-export const stats = [
-  { value: "10+", label: "Years in IT" },
-  { value: "750+", label: "Projects Delivered" },
-  { value: "30%", label: "Ops Cost Reduced" },
+// 5 stats with icon keys — rendered as the bordered strip
+export const stats=[
+ {value:"10+",  label:"Years Experience",         icon:"rocket"},
+ {value:"500+", label:"Projects Delivered",       icon:"cloud"},
+ {value:"5",    label:"IT Professionals Led",     icon:"users"},
+ {value:"250+", label:"International Deployments",icon:"shield"},
+ {value:"16+",  label:"Certifications",           icon:"chart"},
 ];
 
 export const socials = [
