@@ -23,7 +23,7 @@ export const stats=[
  {value:"14+",  label:"Years Experience",         icon:"rocket"},
  {value:"500+", label:"Projects Delivered 🇮🇳",    icon:"cloud"},
  {value:"270+", label:"Hosted Trainings",         icon:"users"},
- {value:"250+", label:"International Projects",   icon:"shield"},
+ {value:"250+", label:"International Projects 🌍",   icon:"shield"},
  {value:"20+",  label:"Digital Transformations",  icon:"chart"},
 ];
 
@@ -62,8 +62,6 @@ export const about = {
     "Cut support tickets by ~50%",
     "5+ years leading & training Office 365 products",
     "750+ projects across India, UAE & Africa",
-    "MBA – Information Technology",
-    "Multilingual: EN · HI · MR · TE",
   ],
 };
 

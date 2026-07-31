@@ -50,6 +50,15 @@ module.exports = {
         blob: "blob 16s ease-in-out infinite",
         spinSlow: "spinSlow 18s linear infinite",
       },
+      keyframes: {
+        bob: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(3px)" },
+        },
+      },
+      animation: {
+        bob: "bob 2s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

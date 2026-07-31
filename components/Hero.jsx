@@ -6,7 +6,6 @@ import {
 } from "react-icons/fa6";
 import { profile, stats } from "@/data/portfolio";
 
-/* icon map for the stats strip */
 function statIcon(key) {
   const map = {
     rocket: FaRocket,
@@ -111,7 +110,7 @@ export default function Hero() {
               {profile.resumeUrl && (
                 <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer" download="Krishna_Andhe_CV.pdf" data-hover
                   className="px-6 py-3 rounded-full border border-accent text-accent font-semibold flex items-center gap-2 hover:bg-accent hover:text-bg transition">
-                  <FiDownload size={18} /> Résumé
+                  <FiDownload size={18} className="animate-bob" /> Résumé
                 </a>
               )}
             </motion.div>
@@ -133,45 +132,45 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* ---------- STATS STRIP (full width, bordered, dividers) ---------- */}
+        {/* ---------- STATS STRIP ----------
+            MOBILE  : 2-column grid (wraps, no horizontal scroll)
+            TABLET  : 3-column grid
+            DESKTOP : single row with vertical dividers                */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-14 glass rounded-2xl px-2 sm:px-4 py-5 sm:py-6"
+          className="mt-14 glass rounded-2xl px-3 sm:px-4 py-5 sm:py-6"
         >
-          <div className="overflow-x-auto no-scrollbar">
-            <ul className="flex items-center min-w-max sm:min-w-0">
-              {stats.map((s, i) => {
-                const Icon = statIcon(s.icon);
-                return (
-                  <li
-                    key={s.label}
-                    className={`flex-1 flex items-center gap-3 sm:gap-4 px-4 sm:px-6 ${
-                      i < stats.length - 1 ? "border-r border-line/70" : ""
-                    }`}
+          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:items-center gap-y-5 gap-x-2">
+            {stats.map((s, i) => {
+              const Icon = statIcon(s.icon);
+              return (
+                <li
+                  key={s.label}
+                  className={`flex items-center gap-3 px-2 sm:px-3 lg:px-6 lg:flex-1
+                    ${i < stats.length - 1 ? "lg:border-r lg:border-line/70" : ""}`}
+                >
+                  <motion.span
+                    initial={{ scale: 0.6, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.7 + i * 0.08, type: "spring", stiffness: 220, damping: 14 }}
+                    className="shrink-0 text-accent"
                   >
-                    <motion.span
-                      initial={{ scale: 0.6, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      transition={{ delay: 0.7 + i * 0.08, type: "spring", stiffness: 220, damping: 14 }}
-                      className="shrink-0 text-accent"
-                    >
-                      <Icon size={26} />
-                    </motion.span>
-                    <span className="min-w-0">
-                      <span className="block text-2xl sm:text-3xl font-extrabold leading-none">
-                        {s.value}
-                      </span>
-                      <span className="block text-[11px] sm:text-xs text-muted mt-1 whitespace-nowrap">
-                        {s.label}
-                      </span>
+                    <Icon size={24} />
+                  </motion.span>
+                  <span className="min-w-0">
+                    <span className="block text-2xl sm:text-3xl font-extrabold leading-none">
+                      {s.value}
                     </span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+                    <span className="block text-[11px] sm:text-xs text-muted mt-1 leading-snug">
+                      {s.label}
+                    </span>
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
         </motion.div>
       </div>
     </section>
