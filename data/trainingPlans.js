@@ -1,12 +1,13 @@
 export const profile = { email: "krishna.andhe@gmail.com", whatsapp: "256770761363" };
 
-// ── DIMENSION 1: TOPICS (top-level) ──
-// Each topic declares which FORMATS it offers (formats can differ per topic).
+// ── DIMENSION 1: APPLICATIONS (topics) ──
 export const topics = [
   { key: "m365", label: "Microsoft 365", icon: "microsoft", blurb: "Productivity, collaboration, admin & Power Platform.",
     formats: ["1on1", "group", "admin", "corporate"] },
   { key: "metabase", label: "Metabase", icon: "metabase", blurb: "Dashboards, questions & analytics on your data.",
-    formats: ["1on1", "group", "corporate"] }, // no separate "admin" tenant track
+    formats: ["1on1", "group", "corporate"] },
+  // Add XYZ later:
+  // { key: "xyz", label: "XYZ", icon: "box", blurb: "...", formats: ["1on1","group","corporate"] },
 ];
 
 // ── DIMENSION 2: FORMATS ──
@@ -17,13 +18,46 @@ export const formats = {
   corporate:   { label: "Corporate", icon: "corporate", blurb: "Company-wide transformation." },
 };
 
-// ── DIMENSION 3: TIERS ──
+// ── DIMENSION 3: PACKAGES (tiers) ──
 export const tierMeta = {
-  basics:   { label: "Basics",   mins: "60 min" },
-  advanced: { label: "Advanced", mins: "90 min" },
-  pro:      { label: "Pro",      mins: "120 min" },
-  expert:   { label: "Expert",   mins: "180 min" },
+  basics:    { label: "Basics",     mins: "60 min" },
+  advanced:  { label: "Advanced",   mins: "90 min" },
+  pro:       { label: "Pro",        mins: "120 min" },
+  expert:    { label: "Expert",     mins: "180 min" },
+  onrequest: { label: "On Request", mins: "Custom programme" }, // corporate only
 };
+
+// Shared 4-phase model used by EVERY topic's Corporate package
+const CORPORATE_PHASES = [
+  { n: "01", t: "Discover", free: true,
+    d: "Free discovery session — understand your current tools, gaps & goals.",
+    acts: ["Current-state audit", "Stakeholder interviews", "Gap analysis"] },
+  { n: "02", t: "Design",
+    d: "Design a tailored roadmap, architecture and adoption plan.",
+    acts: ["Target architecture", "Phased roadmap", "Licensing & cost plan"] },
+  { n: "03", t: "Deploy",
+    d: "Migrate, secure and roll out with role-based training.",
+    acts: ["Migration & coexistence", "Security & governance", "Role-based training"] },
+  { n: "04", t: "Transform",
+    d: "Drive adoption, automate processes and measure ROI.",
+    acts: ["Change management", "Automation (Power Platform)", "Adoption & ROI reporting"] },
+];
+
+function corporatePackage(topicLabel, material) {
+  return {
+    onrequest: {
+      price: "On Request",
+      isPhased: true,
+      popular: false,
+      ideal: `Company-wide ${topicLabel} programme`,
+      summary:
+        "A tailored, multi-phase engagement — from discovery through to lasting adoption and measurable ROI.",
+      phases: CORPORATE_PHASES,
+      cta: "Request a proposal",
+      material,
+    },
+  };
+}
 
 // plans[topic][format][tier] — each plan can carry a `material` image (per package)
 export const plans = {
@@ -106,14 +140,8 @@ export const plans = {
         cta: "Book my session",
         material: "/materials/m365-admin-exp.png" },
     },
-    corporate: {
-      basics: { price: "On request", popular: false, ideal: "Discovery & Awareness",
-        includes: ["Discovery", "Opportunity overview", "Roadmap outline"],
-        modules: ["Current-state audit", "Gap analysis", "Roadmap"],
-        outcomes: ["Clear starting point", "Leadership alignment"],
-        cta: "Request a proposal",
-        material: "/materials/m365-corp-bas.png" },
-    },
+    // Corporate = single "On Request" package with 4 phases
+    corporate: corporatePackage("Microsoft 365", "/materials/m365-corp-bas.png"),
   },
 
   // ===================== METABASE =====================
