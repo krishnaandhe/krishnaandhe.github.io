@@ -20,11 +20,11 @@ export const profile = {
 
 // 5 stats with icon keys — rendered as the bordered strip
 export const stats=[
- {value:"10+",  label:"Years Experience",         icon:"rocket"},
- {value:"500+", label:"Projects Delivered",       icon:"cloud"},
- {value:"5",    label:"IT Professionals Led",     icon:"users"},
- {value:"250+", label:"International Deployments",icon:"shield"},
- {value:"16+",  label:"Certifications",           icon:"chart"},
+ {value:"14+",  label:"Years Experience",         icon:"rocket"},
+ {value:"500+", label:"Projects Delivered 🇮🇳",    icon:"cloud"},
+ {value:"270+", label:"Hosted Trainings",         icon:"users"},
+ {value:"250+", label:"International Projects",   icon:"shield"},
+ {value:"20+",  label:"Digital Transformations",  icon:"chart"},
 ];
 
 export const socials = [
