@@ -20,7 +20,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
-        hand: ['Caveat', 'cursive'],
+        hand: ["Caveat", "cursive"],
       },
       container: {
         center: true,
@@ -44,20 +44,17 @@ module.exports = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        bounceTwice: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "25%, 75%": { transform: "translateY(4px)" },
+          "50%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         wave: "wave 2.2s ease-in-out infinite",
         blob: "blob 16s ease-in-out infinite",
         spinSlow: "spinSlow 18s linear infinite",
-      },
-      keyframes: {
-        bob: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(3px)" },
-        },
-      },
-      animation: {
-        bob: "bob 2s ease-in-out infinite",
+        bounceTwice: "bounceTwice 0.5s ease-in-out",
       },
     },
   },

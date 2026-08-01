@@ -116,18 +116,19 @@ export default function Contact() {
             </AnimatePresence>
           </div>
 
-          {profile.resumeUrl && (
-            <a
-              href={profile.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Krishna_Andhe_CV.pdf"
-              data-hover
-              className="flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-bg font-semibold hover:opacity-90 transition"
-            >
-              <FiDownload size={16} className="animate-bob" /> Download Resume
-            </a>
-          )}
+              {/* WHOLE BUTTON bounces on hover */}
+              {profile.resumeUrl && (
+                <a
+                  href={profile.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="Krishna_Andhe_CV.pdf"
+                  data-hover
+                  className="px-6 py-3 rounded-full border border-accent text-accent font-semibold flex items-center gap-2 hover:bg-accent hover:text-bg transition hover:animate-bounceTwice"
+                >
+                  <FiDownload size={18} /> Résumé
+                </a>
+              )}
         </div>
 
         <footer className="mt-20 pt-8 border-t border-line text-sm text-muted text-center">

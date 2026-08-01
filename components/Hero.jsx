@@ -107,10 +107,17 @@ export default function Hero() {
                 className="px-6 py-3 rounded-full border border-line hover:border-accent transition">
                 Book training
               </a>
+              {/* WHOLE BUTTON bounces on hover */}
               {profile.resumeUrl && (
-                <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer" download="Krishna_Andhe_CV.pdf" data-hover
-                  className="px-6 py-3 rounded-full border border-accent text-accent font-semibold flex items-center gap-2 hover:bg-accent hover:text-bg transition">
-                  <FiDownload size={18} className="animate-bob" /> Résumé
+                <a
+                  href={profile.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="Krishna_Andhe_CV.pdf"
+                  data-hover
+                  className="px-6 py-3 rounded-full border border-accent text-accent font-semibold flex items-center gap-2 hover:bg-accent hover:text-bg transition hover:animate-bounceTwice"
+                >
+                  <FiDownload size={18} /> Résumé
                 </a>
               )}
             </motion.div>
