@@ -1,4 +1,4 @@
-# Krishna Andhe — Portfolio (v10a)
+# Krishna Andhe — Portfolio
 
 Interactive, animated single-page portfolio / living resume with light/dark theming.
 Positioned for a **leadership-track IT professional & Microsoft 365 trainer**.
@@ -15,11 +15,6 @@ Live at **[krishnaandhe.github.io](https://krishnaandhe.github.io)**.
 8. **Testimonials** 🆕 — short & simple quotes under Training
 9. **Trainings & Events Attended** — playful hover chip cloud
 10. **Contact** — social grid + QR + copy-email + résumé
-
-## 🆕 v10a Addition — Testimonials
-Short, simple quote cards placed directly under Training.
-Edit in `data/portfolio.js → testimonials` (each: `quote`, `name`, `role`).
-Add or remove freely — the grid adapts (1–3+ columns).
 
 ## 🚀 Stack
 Next.js 15 · React 19 · Tailwind CSS 3 · Framer Motion 11 · next-themes · react-icons
