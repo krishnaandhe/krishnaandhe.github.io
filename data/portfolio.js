@@ -29,11 +29,11 @@ export const stats=[
 
 export const socials = [
   { name: "GitHub", handle: "@krishnaandhe", url: "https://github.com/krishnaandhe", icon: "github" },
-  { name: "LinkedIn", handle: "in/krishnaandhe", url: "https://www.linkedin.com/in/", icon: "linkedin" }, // ← update
+  { name: "LinkedIn", handle: "in/krishnaandhe", url: "https://www.linkedin.com/in/krishnaandhe", icon: "linkedin" }, // ← update
   { name: "Email", handle: "krishna.andhe@gmail.com", url: "mailto:krishna.andhe@gmail.com", icon: "mail" },
   { name: "WhatsApp", handle: "+91 9029535054", url: "https://wa.me/919029535054", icon: "whatsapp" },
   { name: "X (Twitter)", handle: "@krishnaandhe", url: "https://x.com/", icon: "x" }, // ← update or remove
-  { name: "Telegram", handle: "@krishnaandhe", url: "https://t.me/", icon: "telegram" }, // ← update or remove
+  { name: "Telegram", handle: "@krishnaandhe", url: "https://t.me/krishnaandhe", icon: "telegram" }, // ← update or remove
 ];
 
 export const stack = [
