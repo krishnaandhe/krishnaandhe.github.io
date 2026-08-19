@@ -9,7 +9,7 @@ import {
 import {
   FiTerminal, FiZap, FiServer, FiCode, FiCloud, FiBell, FiMap,
   FiUsers, FiShare2, FiBox, FiGitBranch, FiAward, FiBookOpen,
-  FiUser, FiSettings, FiBriefcase, FiBarChart2,
+  FiUser, FiSettings, FiBriefcase, FiBarChart2, FiCalendar,
 } from "react-icons/fi";
 
 const map = {
@@ -19,7 +19,7 @@ const map = {
   powershell: FiTerminal, leaflet: SiLeaflet,
   route: FiMap, bell: FiBell, terminal: FiTerminal, server: FiServer,
   cloud: FiCloud, code: FiCode, network: FiShare2, users: FiUsers, repo: FiGitBranch,
-  cert: FiAward, education: FiBookOpen, user: FiUser, settings: FiSettings, experience: FiBriefcase,metabase:FiBarChart2,
+  cert: FiAward, education: FiBookOpen, user: FiUser, settings: FiSettings, experience: FiBriefcase, metabase: FiBarChart2, calendar: FiCalendar,
   github: FaGithub, linkedin: FaLinkedin, mail: FaEnvelope,
   x: FaXTwitter, telegram: FaTelegram, whatsapp: FaWhatsapp,
 };

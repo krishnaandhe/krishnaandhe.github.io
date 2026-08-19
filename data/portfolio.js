@@ -32,7 +32,7 @@ export const socials = [
   { name: "LinkedIn", handle: "in/krishnaandhe", url: "https://www.linkedin.com/in/krishnaandhe", icon: "linkedin" }, // ← update
   { name: "Email", handle: "krishna.andhe@gmail.com", url: "mailto:krishna.andhe@gmail.com", icon: "mail" },
   { name: "WhatsApp", handle: "+91 9029535054", url: "https://wa.me/919029535054", icon: "whatsapp" },
-  { name: "X (Twitter)", handle: "@krishnaandhe", url: "https://x.com/", icon: "x" }, // ← update or remove
+  { name: "Book a Session", handle: "Free discovery call", url: "https://calendar.app.google/wC1iaXxYYy5Ty9qo6", icon: "calendar" },
   { name: "Telegram", handle: "@krishnaandhe", url: "https://t.me/krishnaandhe", icon: "telegram" }, // ← update or remove
 ];
 
